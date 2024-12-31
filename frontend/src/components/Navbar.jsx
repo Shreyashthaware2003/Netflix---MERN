@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IoLanguageSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [language, setLanguage] = useState('English'); // Default language
@@ -20,7 +21,7 @@ function Navbar() {
 
                             {/* Current selected language button */}
                             <button
-                                className="px-2 py-1 w-auto md:w-36 bg-transparent text-white rounded focus:outline-none hover:bg-gray-300 flex justify-center items-center font-semibold gap-2 border border-gray-400"
+                                className="px-2 py-1 w-auto md:w-36 bg-transparent text-white rounded focus:outline-none flex justify-center items-center font-semibold gap-2 border border-gray-400"
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             ><IoLanguageSharp />
                                 <span className='hidden md:inline '>{language}</span>
@@ -45,7 +46,7 @@ function Navbar() {
                                 </div>
                             )}
                         </div>
-                        <button className='bg-[#e50914] hover:bg-red-700 duration-300 text-white font-semibold px-4 py-1 md:px-2 md:py-1 rounded'>Sign In</button>
+                        <Link to={'/login'} className='bg-[#e50914] hover:bg-red-700 duration-300 text-white font-semibold px-4 py-1 md:px-2 md:py-1 rounded'>Sign In</Link>
                     </div>
                 </div>
             </div>
