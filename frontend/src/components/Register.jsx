@@ -158,7 +158,7 @@ function Register() {
                             className="p-3 w-80 sm:w-[500px] bg-transparent border border-gray-300 rounded-md"
                         />
                         <div className='flex justify-start md:justify-center items-center w-full md:w-auto'>
-                            <button className="sec-email-start-btn ml-4 px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-lg font-bold rounded">
+                            <button className="sec-email-start-btn ml-4 px-6 py-3 bg-red-600 hover:bg-red-700 duration-300 text-white text-lg font-bold rounded">
                                 Get Started &gt;
                             </button>
                         </div>
