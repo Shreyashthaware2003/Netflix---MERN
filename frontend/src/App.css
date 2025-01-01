@@ -1,42 +1,18 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.circle-loader {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 3px solid white; /* Light gray border */
+  border-top: 5px solid #e50914; /* Red color for the rotating part */
+  border-radius: 50%; /* Makes it a circle */
+  animation: spin 1s linear infinite; /* Infinite spinning */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes spin {
+  0% {
+      transform: rotate(0deg); /* Start at 0 degrees */
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      transform: rotate(360deg); /* Complete a full rotation */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
