@@ -37,7 +37,7 @@ function Login() {
                 // Navigate based on the action
                 if (isLogin) {
                     dispatch(setUser(res.data.user))
-                    navigate('/home'); // Replace with your target page after login
+                    navigate('/'); // Replace with your target page after login
                 } else {
                     setIsLogin(true); // Redirect to login after registration
                 }

@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import Login from "./components/Login";
 
 
+
 function App() {
 
 
@@ -14,7 +15,7 @@ function App() {
       <Toaster />
       <BrowserRouter>
         <Routes>
-          <Route index path="/home" element={<Home />} />
+          <Route index path="/" element={<Home />} />
           <Route path="/body" element={<Body />} />
           <Route path="/login" element={<Login />} />
           {/* <Route path="/register" element={<Register />} /> */}
