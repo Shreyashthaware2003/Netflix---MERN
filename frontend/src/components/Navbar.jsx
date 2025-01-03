@@ -54,7 +54,7 @@ function Navbar() {
 
     return (
         <div className="bg-gradient-to-b from-black absolute z-10 w-full">
-            <div className="flex justify-between items-center w-full py-6 px-6 md:px-0 max-w-[1260px] mx-auto">
+            <div className="flex justify-between items-center w-full py-6 px-6 md:px-4 max-w-[1260px] mx-auto">
                 <img src="netflix.svg" className="w-24 md:w-36" alt="Netflix logo" />
 
                 {/* Mobile Menu Toggle */}
@@ -115,7 +115,7 @@ function Navbar() {
 
                     {user && ( // Only render the language and Sign Up button if the user is logged in
                         <div className="relative flex items-center gap-4">
-                            <div className='border border-gray-400 max-w-56 px-1 py-1 rounded text-white flex justify-between items-center gap-6'>{user.fullName}<FaCaretDown />
+                            <div className='border border-gray-400 max-w-56 px-2 py-1 rounded text-white flex justify-between items-center gap-6'>{user.fullName}<FaCaretDown />
                             </div>
 
                             {/* Logout Button */}
