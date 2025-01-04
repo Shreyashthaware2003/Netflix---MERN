@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import Navbar from './Navbar';
-// import Footer from './Footer';
+import Footer from './Footer';
 import { IoIosArrowForward } from 'react-icons/io';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -135,7 +135,7 @@ function Register() {
                 </div>
 
                 {/* Footer */}
-                {/* <Footer /> */}
+                <Footer />
             </div>
         </>
     );

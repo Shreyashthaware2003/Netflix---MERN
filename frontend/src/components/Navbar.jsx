@@ -10,6 +10,13 @@ import { setUser } from '../redux/userSlice';
 import toast from 'react-hot-toast';
 
 function Navbar() {
+    const [bg, setBg] = useState(false);
+    const handleBgClick = () => {
+        setBg(true);
+        setTimeout(() => {
+            setBg(false); // Revert back after 1 second
+        }, 2000);
+    }
     const [language, setLanguage] = useState('English'); // Default language
     const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown visibility
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu visibility
@@ -53,7 +60,7 @@ function Navbar() {
     };
 
     return (
-        <div className="bg-gradient-to-b from-black absolute z-10 w-full">
+        <div className="bg-gradient-to-b from-black  absolute z-10 w-full">
             <div className="flex justify-between items-center w-full py-6 px-6 md:px-4 max-w-[1260px] mx-auto">
                 <img src="netflix.svg" className="w-24 md:w-36" alt="Netflix logo" />
 
@@ -115,7 +122,7 @@ function Navbar() {
 
                     {user && ( // Only render the language and Sign Up button if the user is logged in
                         <div className="relative flex items-center gap-4">
-                            <div className='border border-gray-400 max-w-56 px-2 py-1 rounded text-white flex justify-between items-center gap-6'>{user.fullName}<FaCaretDown />
+                            <div className={`border-2 border-gray-400 max-w-56 px-2 py-1 rounded  flex justify-between items-center gap-4 font-semibold cursor-pointer ${bg ? 'bg-white text-black transition-all duration-300' : 'text-white'}`} onClick={handleBgClick}><CgProfile className='text-2xl' />{user.fullName}
                             </div>
 
                             {/* Logout Button */}
@@ -178,7 +185,7 @@ function Navbar() {
 
                     {user && (
                         <>
-                            <div className="text-black flex justify-center items-center gap-2 hover:bg-gray-300 w-full px-2 py-1 rounded-md"><CgProfile />{user.fullName}</div>
+                            <div className="text-black flex justify-center items-center hover:bg-gray-300 w-full px-2 py-1 rounded-md"><CgProfile />{user.fullName}</div>
 
                             {/* Logout Button */}
                             <Link
